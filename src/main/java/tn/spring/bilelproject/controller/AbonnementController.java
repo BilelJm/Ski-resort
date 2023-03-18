@@ -49,19 +49,19 @@ public class AbonnementController {
         return iAbonnementServices.updateAbonnement(abonnement);
     }
     @GetMapping("/GetAbonnementByType/{type}")
-    public List<Abonnement> RetreiveAbonnByType(@PathVariable("type")TypeAbonnement typeAbonnement)
+    public List<Abonnement> getAbonnementByTypeAbonnementOrderByDateDebut(@PathVariable("type")TypeAbonnement typeAbonnement)
     {
-        return iAbonnementServices.GetAbonnementByType(typeAbonnement);
+        return iAbonnementServices.getAbonnementByTypeAbonnementOrderByDateDebut(typeAbonnement);
     }
 
     @GetMapping("/getAbonnementByDateDebut/{dateDeb}/{dateFin}")
-    public List<Abonnement> RetreiveAbonnByType(@PathVariable("dateDeb") String datedeb, @PathVariable("dateFin")String dateFin) throws ParseException {
+    public List<Abonnement> getAbonnementByDateDebut(@PathVariable("dateDeb") String datedeb, @PathVariable("dateFin")String dateFin) throws ParseException {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date dated = dateFormat.parse(datedeb);
         Date datef = dateFormat.parse(dateFin);
 
-        return iAbonnementServices.GetListAbonnementBy2Date(dated,datef);
+        return iAbonnementServices.getAbonnementByDateDebut(dated,datef);
     }
 
 }

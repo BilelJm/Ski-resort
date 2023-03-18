@@ -55,8 +55,8 @@ public class MoniteurController {
         return iMoniteurServices.GetWeeksNumber(moniteurnum,support);
     }
 
-    @PostMapping("/addMonitorAndAssignToCours/{numCours}")
-    public Moniteur addMonitorAndAssignToCours(@RequestBody Moniteur moniteur,@PathVariable("numCours")Long numCours)
+    @PostMapping("/addMonitorAndAssignToCourse/{numCours}")
+    public Moniteur addMonitorAndAssignToCourse(@RequestBody Moniteur moniteur,@PathVariable("numCours")Long numCours)
     {
         return iMoniteurServices.addMonitorAndAssignToCours(moniteur,numCours);
     }

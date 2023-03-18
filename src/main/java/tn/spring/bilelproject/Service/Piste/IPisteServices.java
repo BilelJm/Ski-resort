@@ -15,7 +15,7 @@ public interface IPisteServices {
 
     Piste retrievePiste (Long numPiste);
     void removePiste(Long numPiste);
-    Piste findByNomPisteAndCouleur(String nomPiste, Couleur couleur);
+
 
 
 

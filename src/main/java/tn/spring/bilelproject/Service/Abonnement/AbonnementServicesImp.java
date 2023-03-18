@@ -42,13 +42,13 @@ public class AbonnementServicesImp implements IAbonnementServices {
     }
 
     @Override
-    public List<Abonnement> GetAbonnementByType(TypeAbonnement typeAbonnement) {
-        return  IAbonnementRepository.GetAbonnementByType(typeAbonnement);
+    public List<Abonnement> getAbonnementByTypeAbonnementOrderByDateDebut(TypeAbonnement typeAbonnement) {
+        return  IAbonnementRepository.getAbonnementByTypeAbonnementOrderByDateDebut(typeAbonnement);
     }
 
     @Override
-    public List<Abonnement> GetListAbonnementBy2Date(Date datedeb, Date datefin) {
-        return IAbonnementRepository.GetListAbonnementBy2Date(datedeb,datefin);
+    public List<Abonnement> getAbonnementByDateDebut(Date datedeb, Date datefin) {
+        return IAbonnementRepository.getAbonnementByDateDebut(datedeb,datefin);
     }
 
 }

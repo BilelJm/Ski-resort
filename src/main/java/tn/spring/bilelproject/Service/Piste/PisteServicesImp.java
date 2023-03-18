@@ -43,10 +43,7 @@ public class PisteServicesImp implements IPisteServices {
         iPisteRepository.deleteById(numPiste);
     }
 
-    @Override
-    public Piste findByNomPisteAndCouleur(String nomPiste, Couleur couleur) {
-        return iPisteRepository.findByNomPisteAndCouleur(nomPiste,couleur) ;
-    }
+
 
 
 

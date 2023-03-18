@@ -51,10 +51,6 @@ public class PisteController {
         iPisteServices.removePiste(id);
     }
 
-    @GetMapping("findByNomPisteAndCouleur/{nom}/{couleur}")
-    public Piste findByNomPisteAndCouleur(@PathVariable("nom") String nom, @PathVariable("couleur")Couleur couleur)
-    {
-        return iPisteServices.findByNomPisteAndCouleur(nom,couleur);
-    }
+
 
 }

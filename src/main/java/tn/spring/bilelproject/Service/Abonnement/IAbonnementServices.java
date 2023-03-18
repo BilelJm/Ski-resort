@@ -1,5 +1,6 @@
 package tn.spring.bilelproject.Service.Abonnement;
 
+import org.springframework.data.repository.query.Param;
 import tn.spring.bilelproject.entities.Abonnement;
 import tn.spring.bilelproject.entities.TypeAbonnement;
 
@@ -17,8 +18,8 @@ public interface IAbonnementServices {
     Abonnement retrieveAbonnement (Long numAbonnement);
     void removeAbonnement (Long numAbonnement);
 
-   List<Abonnement> GetAbonnementByType(TypeAbonnement typeAbonnement);
-    List<Abonnement>GetListAbonnementBy2Date(Date datedeb,Date datefin);
+    List<Abonnement> getAbonnementByTypeAbonnementOrderByDateDebut(@Param("type") TypeAbonnement type);
+    List<Abonnement> getAbonnementByDateDebut(Date dated, Date datef);
 
 
 }
